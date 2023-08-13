@@ -15,8 +15,8 @@ const ProductList = () => {
     <View>
       <FlatList
         data={products}
-        renderItem={({ item }) => (item.unitPrice > 50) ? <Text style={{ backgroundColor: 'red' }}>{item.name} - {item.unitPrice}</Text> :
-          <Text>{item.name} - {item.unitPrice}</Text>} />
+        renderItem={({ item }) => (item.unitPrice > 50) ? <Text style={{ backgroundColor: 'red', fontSize: 20, fontWeight: '400' }}>{item.name} - {item.unitPrice}</Text> :
+          <Text style={{ fontSize: 20, fontWeight: '400' }}>{item.name} - {item.unitPrice}</Text>} />
     </View>
   );
 };
