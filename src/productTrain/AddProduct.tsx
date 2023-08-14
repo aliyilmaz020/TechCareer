@@ -40,8 +40,8 @@ const AddProduct = () => {
 
       </View>
       <View style={{ flex: 1, alignItems: 'center' }}>
-        <Pressable style={{ borderRadius: 30, width: 45, height: 40, backgroundColor: 'blue', justifyContent: 'center' }} onPress={add}>
-          <Text style={{ textAlign: 'center', fontWeight: '500', fontSize: 20 }}>Add</Text>
+        <Pressable style={{ borderRadius: 30, width: 90, height: 50, backgroundColor: 'blue', justifyContent: 'center' }} onPress={add}>
+          <Text style={{ textAlign: 'center', fontWeight: '600', fontSize: 20 }}>Add</Text>
         </Pressable>
       </View>
     </View>
