@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Pressable, Text } from 'react-native';
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -15,24 +15,35 @@ const AddProduct = () => {
       unitsInStock: unitsInStock,
     };
     axios.post('https://northwind.vercel.app/api/products', newProduct);
+    setname('');
+    setunitPrice(0);
+    setunitsInStock(0);
   };
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <View>
-        <TextInput style={styles.input} value={name} onChangeText={setname} />
+    <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <TextInput style={styles.input} value={name} onChangeText={setname} placeholder='Name' />
         <TextInput
           style={styles.input}
-          value={unitPrice.toString()}
-          onChangeText={(value) => setunitPrice(Number(value))}
+          value={unitPrice === 0 ? '' : unitPrice.toString()}
+          onChangeText={(value) => setunitPrice(Number(value) || 0)}
+          placeholder='Unit Price'
         />
+
         <TextInput
           style={styles.input}
-          value={unitsInStock.toString()}
-          onChangeText={(value) => setunitsInStock(Number(value))}
+          value={unitsInStock === 0 ? '' : unitsInStock.toString()}
+          onChangeText={(value) => setunitsInStock(Number(value) || 0)}
+          placeholder='Units In Stock'
         />
+
       </View>
-      <Button title='add' onPress={add} />
+      <View style={{ flex: 1, alignItems: 'center' }}>
+        <Pressable style={{ borderRadius: 30, width: 45, height: 40, backgroundColor: 'blue', justifyContent: 'center' }} onPress={add}>
+          <Text style={{ textAlign: 'center', fontWeight: '500', fontSize: 20 }}>Add</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };

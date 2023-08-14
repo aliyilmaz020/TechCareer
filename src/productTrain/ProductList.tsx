@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import { View, Text, FlatList } from 'react-native';
 import React, { useEffect, useState } from 'react';
