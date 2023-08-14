@@ -6,7 +6,7 @@ import ProductList from './src/productTrain/ProductList';
 
 export default function App(): JSX.Element {
 
-  // return <ProductList />
-  return <AddProduct />
+  return <ProductList />
+  // return <AddProduct />
 
 }
