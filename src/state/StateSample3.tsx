@@ -23,6 +23,7 @@ const StateSample3 = () => {
   const deleteCategory = (id) => {
     var filteredCategories = categoryList.filter(q => q.id !== id);
     setcategoryList([...filteredCategories]);
+    // console.log(filteredCategories.length);
   };
 
   const renderItem = ({ item }) => <Pressable onPress={() => deleteCategory(item.id)}><Text style={{ fontSize: 30 }}>{item.name}</Text></Pressable>;

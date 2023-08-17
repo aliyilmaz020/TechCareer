@@ -15,10 +15,10 @@ const StateSample4 = () => {
     setusers([...users, newUser]);
     setname('');
     setsurname('');
-  }
+  };
   const deleteUsers = () => {
     setusers([]);
-  }
+  };
   return (
     <View>
       <Button title='Delete' onPress={deleteUsers} />

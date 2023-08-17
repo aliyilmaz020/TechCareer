@@ -16,11 +16,12 @@ const ProductList = () => {
         .then(res => {
           setproducts(res.data);
           setloading(false);
+          console.log(res.status);
         })
         // eslint-disable-next-line handle-callback-err, @typescript-eslint/no-unused-vars
         .catch(err => {
           setloading(false);
-          Alert.alert('Hata meydana geldi!!');
+          Alert.alert('Hata meydana geldi!! ' + err.response.status);
           seterror(err);
         })
     }, 2000);

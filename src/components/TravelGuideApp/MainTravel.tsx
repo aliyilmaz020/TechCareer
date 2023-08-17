@@ -8,7 +8,7 @@ import TripsAll from './TripsAll';
 import TopBox from './TopBox';
 const MainTravel = () => {
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: '#F7F7F7' }}>
+    <ScrollView style={{ flex: 1, backgroundColor: '#F7F7F7', width: 'auto', height: 'auto' }}>
       <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
         <View style={{ flex: 1, marginLeft: 23, marginTop: 30 }}>
           <Text style={{ fontSize: 18, fontWeight: '400' }}>Location</Text>
@@ -43,6 +43,23 @@ const MainTravel = () => {
         <TopBox image={'https://s3-alpha-sig.figma.com/img/855e/9558/1d96234bbeb912d48f57b1cc8257aec0?Expires=1693180800&Signature=gz~5pqI0quDmPxL6TKcZpyL-ETl0Qlqous6iWtmSXcJFoJ9MDsTxW4r104pvz96P2m5jxG1l2buZ5N9EFPNjNl6nM9Be1pP3sB-U59cMidVpZtNRX9tgHcZa0OtzPOL0EMMI~8r0vPKCfroJB0~2iUVuPcGnKIBlBuqVnzgiijzjK9GRojS1ilDTgvS5Sg-MVfVTvjSw3O47dQZWwF4BpcRUqmnduodAn4X3XMXfjx8KzScoJApnMBHyUN8JKzeJrH9ZNYAIJ4qUTIxxV0MDQg3ZgkzpHpRq19Sr0WfXd5aMWzBtZwQSFFTQrxNfe2-UwbgedG7KJxwyXX96VZTv-g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'}
           tripsTitle={'Lake McDonald'} location={'Uşak'} />
       </ScrollView>
+      <TripsAll leftTitle={'Group Trips'} rightTitle={'See All'} />
+      <View style={{ flex: 1, width: 360, height: 136, backgroundColor: '#ffffff', borderRadius: 20, justifyContent: 'space-between', alignSelf: 'center', marginBottom: 5, flexDirection: 'row' }}>
+        <Image source={{ uri: 'https://s3-alpha-sig.figma.com/img/f934/f7bc/ad73524f5bceb642cc2179f4eb2b1fb4?Expires=1693180800&Signature=hz9tL43PcLCd2HdYgpxXGTCjD6snbpQYBqTnhCjje5EAnmCVnRfruYOhvxlGA3bZZfbrjgBKgTVMwx7~jWoRE30bMRQP3o2sgpNQldxiwNUs6EPQUey09YIxO7mCYzgCQ6sY7TWoLPf0vqdkCLQgaR8N6Hwt1-dKPR8frlQhD8MFVvBE9J5ayt3FjfkenzXPt9oetk3LKGB0N-VBGUYa5LT~ZqRRsUg6BjYx3RsQtjskBF~cIVoPT5jaiDYiSEJDaokCeFDHaeaSqMCv-~MjAWecKKaPulKv~A4Su2IJam1O23i4Nu9qHFBW059BIHX6DFlqBm4Vs05UbjYDq1N0lg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' }}
+          style={{ height: 129, width: 148, borderRadius: 34, margin: 4 }}
+        />
+        <View style={{ marginRight: 25, gap: 10, justifyContent: 'center', alignItems: 'flex-start' }}>
+          <Text style={{ fontSize: 16, fontWeight: '600', color: 'black' }}>Mountain Trip</Text>
+          <Text style={{ fontSize: 14, fontWeight: '400', color: '#636363' }}>Seelisburg</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
+            <Image style={{ height: 12, width: 10 }} source={require('../../../assets/TravelPics/Location.png')} />
+            <Text style={{ fontSize: 12, fontWeight: '500', color: '#636363' }}>Norway</Text>
+          </View>
+          <View style={{ width: 164, height: 6, borderRadius: 20, backgroundColor: '#d9d9d9' }}>
+            <View style={{ width: 145, height: 6, borderRadius: 20, backgroundColor: '#008FA0' }} />
+          </View>
+        </View>
+      </View>
     </ScrollView>
   );
 };
@@ -57,7 +74,6 @@ const styles = StyleSheet.create({
     borderColor: '#E9E9E9',
     backgroundColor: '#FFFFFF',
     fontSize: 18,
-
   },
 });
 

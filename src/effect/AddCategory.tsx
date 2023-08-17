@@ -14,16 +14,16 @@ const AddCategory = () => {
     };
 
     axios.post('https://northwind.vercel.app/api/categories', newCategory)
-      .then(res => { Alert.alert("Yeni bir kategori eklendi. ") });
+      .then(res => { Alert.alert("Yeni bir kategori eklendi.") });
   };
 
   return (
     <View>
       <View>
-        <TextInput style={styles.input} value={name} onChangeText={setname} />
+        <TextInput style={styles.input} value={name} onChangeText={setname} placeholder='Name' />
       </View>
       <View>
-        <TextInput style={styles.input} value={description} onChangeText={setdescription} />
+        <TextInput style={styles.input} value={description} onChangeText={setdescription} placeholder='Description' />
       </View>
       <View>
         <Button title='add' onPress={add} />

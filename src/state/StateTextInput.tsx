@@ -9,7 +9,7 @@ const StateTextInput = () => {
   const [cities, setcities] = useState([]);
 
   const add = () => {
-    if (cityName != '') {
+    if (cityName !== '') {
       var city = cities.find(x => x == cityName);
       if (!city) {
         setcities([...cities, cityName]);
