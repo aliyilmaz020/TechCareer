@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-native/gradle-plugin": "^0.72.11",
+    "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/core": "^6.4.9",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",

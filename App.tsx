@@ -14,7 +14,18 @@ export default function App(): JSX.Element {
   return <>
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: 'Ana Sayfa',
+            headerTitleAlign: 'center',
+            headerShown: false, //title gizleme
+
+
+
+          }}
+        />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Contact" component={ContactScreen} />
       </Stack.Navigator>
