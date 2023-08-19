@@ -9,6 +9,7 @@ const Customers = () => {
       res.json()),
     {
       staleTime: 10000,
+      // retry: 4,
     }
   );
 
