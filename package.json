@@ -10,9 +10,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native/gradle-plugin": "^0.72.11",
     "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "link": "^1.5.1",
     "react": "18.2.0",
-    "react-native": "0.72.3"
+    "react-native": "0.72.4",
+    "react-native-dotenv": "^3.4.9",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

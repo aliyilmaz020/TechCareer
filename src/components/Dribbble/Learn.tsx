@@ -23,7 +23,7 @@ export default function Learn() {
         <Box backColor={'#327389'} text1={'Hand & Arm'} text2={'2 diseases'} />
       </View>
       <View style={{ flex: 1, borderBlockColor: '#F4F5F6', borderTopWidth: 2, marginBottom: 20 }}>
-        <Pressable onPress={() => console.warn('Bastınız.')} style={{ marginBottom: 50, alignItems: 'center' }}>
+        <Pressable onPress={() => console.error('Bastınız.')} style={{ marginBottom: 50, alignItems: 'center' }}>
           <Image style={{ bottom: 24, width: 70, height: 55 }} source={require('../../../assets/iconLogo.png')} />
         </Pressable>
       </View>
