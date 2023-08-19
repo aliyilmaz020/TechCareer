@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { View, Text } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LottieView from 'lottie-react-native';
 
 const HomeStack = createNativeStackNavigator();
 
@@ -27,9 +28,19 @@ function HomeChartScreen() {
 }
 
 function HomeMainScreen() {
+  const animation = useRef(null);
   return (
     <View>
-      <Text>HomeMainScreen</Text>
+      <LottieView
+        autoPlay
+        ref={animation}
+        style={{
+          width: 200,
+          height: 200,
+          backgroundColor: '#ffffff',
+        }}
+        source={require('../../lottieSample/karpuz.json')}
+      />
     </View>
   );
 }
