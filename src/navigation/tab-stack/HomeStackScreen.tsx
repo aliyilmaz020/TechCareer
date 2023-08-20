@@ -10,7 +10,7 @@ const HomeStackScreen = () => {
   return (
     <>
       <HomeStack.Navigator>
-        <HomeStack.Screen name='HomeMain' component={HomeMainScreen} />
+        <HomeStack.Screen name='HomeMain' component={HomeMainScreen} options={{ title: "Ana Sayfa", headerTitleAlign: 'center' }} />
         <HomeStack.Screen name='Chart' component={HomeChartScreen} />
       </HomeStack.Navigator>
     </>
