@@ -2,6 +2,7 @@
 import { View, Text, FlatList, Pressable } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { List } from 'react-native-paper';
 
 const ProductListScreen = ({ navigation }) => {
   const [products, setproducts] = useState([]);
@@ -17,7 +18,10 @@ const ProductListScreen = ({ navigation }) => {
   }
   const renderItem = ({ item }) => {
     return <Pressable onPress={() => goToDetail(item)}>
-      <Text style={{ fontSize: 24 }}>{item.name}</Text>
+      <List.Item
+        title={item.name}
+        left={props => <List.Icon {...props} icon="folder" />}
+      />
     </Pressable>
   }
 

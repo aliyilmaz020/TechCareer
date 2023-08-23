@@ -6,7 +6,7 @@ const ProductDetailScreen = ({ route }) => {
 
   const { item } = route.params;
 
-  console.log("Item", item);
+  // console.log("Item", item);
 
   return (
     <View>

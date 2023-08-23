@@ -10,7 +10,7 @@ const ProfileStack = () => {
   return (
     <>
       <ProfileStackScreens.Navigator>
-        <ProfileStackScreens.Screen name="Profile" component={ProfileMainScreen} />
+        <ProfileStackScreens.Screen name="ProfileMain" component={ProfileMainScreen} />
       </ProfileStackScreens.Navigator>
     </>
   );

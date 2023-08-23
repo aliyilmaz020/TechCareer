@@ -11,12 +11,15 @@ const Tab = createBottomTabNavigator();
 
 export default function App(): JSX.Element {
   return <>
+
     <NavigationContainer>
       <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name="Product" component={ProductStack} />
         <Tab.Screen name="Profile" component={ProfileStack} />
       </Tab.Navigator>
     </NavigationContainer>
+
+
   </>
 
 }
